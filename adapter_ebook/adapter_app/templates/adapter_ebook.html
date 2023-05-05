@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Adapter Ebook</title>
+    <!-- Adicione o link para o arquivo CSS do Bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Introdução</h1>
+	<p>Em projetos de software, é comum encontrar situações em que você precisa integrar componentes ou sistemas que foram desenvolvidos de forma independente e possuem interfaces diferentes. Essas interfaces podem ter estruturas de dados distintas, métodos com nomes diferentes ou até mesmo semântica divergente. Modificar diretamente essas interfaces para torná-las compatíveis nem sempre é possível ou desejável, especialmente quando se trata de componentes legados ou bibliotecas de terceiros.</p>
+	<p>Para atender estas situações citadas, surgiu o Padrão de Projeto Adapter, porque permite que objetos com interfaces incompatíveis trabalhem juntos, promovendo a interoperabilidade entre diferentes componentes e sistemas. Ele facilita a integração de componentes legados, o uso de bibliotecas de terceiros e a adaptação de interfaces para diferentes plataformas, garantindo a compatibilidade e reutilização de código.</p>
+        <!--a href="http://www.google.com" class="btn btn-primary">Visite o nosso site</a-->
+    
+        <h1>2 - Conhecendo o Design Partner Adapter</h1>
+        <p>O padrão Adapter é um padrão de design estrutural que permite que objetos com interfaces incompatíveis trabalhem juntos. Ele converte a interface de um objeto em uma interface esperada pelo cliente, tornando objetos incompatíveis cooperarem sem que o cliente precise modificar seu código.</p>
+        <p>Vamos explorar os elementos principais do padrão Adapter:</p>
+        <ul>
+            <li>Interface do Cliente: É a interface desejada pelo cliente, definindo os métodos e operações que o cliente espera utilizar. Essa interface representa os requisitos funcionais do cliente em termos de interação com outros objetos.</li>
+            <li>Classe Existente: É a classe que possui a funcionalidade necessária pelo cliente, mas sua interface não é compatível com a interface do cliente. Essa classe existente pode ser um componente legado, uma biblioteca de terceiros ou qualquer outra implementação já existente.</li>
+            <li>Adapter: É o componente principal do padrão Adapter. Ele implementa a interface do cliente e encapsula a classe existente. O adaptador age como um intermediário entre o cliente e a classe existente, traduzindo as chamadas do cliente para chamadas que a classe existente entende. Ele é responsável por converter os parâmetros recebidos, chamar os métodos apropriados da classe existente e, se necessário, converter os resultados de volta para o formato esperado pelo cliente.</li>
+        </ul>
+        
+        <p>O padrão Adapter pode ser implementado de duas maneiras principais:</p>
+        <ul>
+            <li>Adaptador de Objeto: Nessa variante, o adaptador é composto por um objeto que contém uma instância da classe existente. O adaptador implementa a interface do cliente e delega as chamadas de método do cliente para a classe existente. Ele realiza a tradução dos parâmetros e resultados conforme necessário.</li>
+            <li>Adaptador de Classe: Nessa variante, o adaptador estende a classe existente e, ao mesmo tempo, implementa a interface do cliente. O adaptador herda os métodos da classe existente e os adapta para atender à interface do cliente. Ele pode adicionar novos métodos ou redefinir os métodos exist
+        
+    
+    </div>
+    <!-- Adicione o link para o arquivo JS do Bootstrap, caso necessário -->
+    <div class="container">
+        <p> Exemplo de Código usando Adapter</p>
+        <img src="{% static 'adapter_app/adapter2.jpg' %}" alt="Código abaixo">
+        <br>
+        <img src="{% static 'adapter_app/codigo_adpter.jpg' %}" alt="Segundo código">
+    </div>
+    
+        
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
